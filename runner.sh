@@ -8,6 +8,7 @@ for arg in $*; do
   if [ $? -ne 0 ]; then
     echo "The first line of your code should be something like:"
     echo "// 2015/s1" 
+    exit 1
   fi
 
   g++ "$arg" -o tmp.exe
